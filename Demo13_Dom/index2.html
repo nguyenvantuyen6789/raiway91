@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h4>Hàm Js</h4>
+    <script>
+        // tạo hàm
+        // c1: function name() {}
+        // c2: let funcName = () => {} // arrow function (hàm mũi tên)
+        function showData() {
+            console.log("Quốc gia chuyển đổi số");
+            console.log("Giúp phát triển thần tốc");
+        }
+
+        showData();
+        showData();
+
+        let showAge = () => {
+            console.log("Age: " + 30);
+        }
+        showAge();
+
+        // tạo hàm có param tham số
+        function showPerson(fullName, address, age) {
+            console.log(`full name: ${fullName}, address: ${address}, age: ${age}`);
+        }
+
+        showPerson("Trần Nam", "HP", 11);
+    </script>
+</body>
+</html>

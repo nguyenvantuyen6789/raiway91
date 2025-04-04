@@ -1,0 +1,43 @@
+#menu {
+    /* background: */
+    /* background-color: màu nền */
+    /* background-image: hiển thị ảnh nền */
+    /* background-size: kích cỡ */
+    /* background-position: vị trí */
+    /* background-repeat: lặp hoặc k lặp */
+    /*background-image: url("raize.jpg");*/
+    /*height: 300px;*/
+    color: red;
+    /*background-size: 100px 100px;*/
+    /* no-repeat: k lặp */
+    /* repeat-x: lặp theo chiều ngang */
+    /* repeat-y: lặp theo chiều dọc */
+    /* repeat: lặp theo chiều ngang và dọc */
+    /*background-repeat: no-repeat;*/
+    /* left: ảnh nền ở trái */
+    /* right: ảnh nền ở phải */
+    /* center: ảnh nền ở giữa */
+    /*background-position: center;*/
+
+    /* viết ngắn gọn */
+    /*background: color image repeat size position;*/
+    background: yellow;
+    width: 200px;
+    float: left;
+}
+/* khi cho float left cho 2 div, thì cả 2 tràn dồn bên trái */
+/* nên box dưới dồn lên trên */
+
+/* khi cho float right cho 2 div, thì cả 2 tràn dồn bên phải */
+/* nên box dưới dồn lên trên */
+.sp {
+    background: aquamarine;
+    width: 100px;
+    float: left;
+}
+
+.footer {
+    width:500px;
+    background: blueviolet;
+    clear: both;
+}

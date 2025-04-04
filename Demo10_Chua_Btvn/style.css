@@ -1,0 +1,45 @@
+
+ul.menu_2 {
+    width: 1300px;
+    /* cách 2 bên đều nhau */
+    margin: auto;
+    /* dâu đầu của li */
+    /* none: không có gì */
+    /* circle: dấu tròn rỗng */
+    /* decimal: số thứ tự */
+    /* disc: dấu chấm tròn đen */
+    /* lower-alpha: abc chữ thường */
+    /* upper-alpha: abc chữ hoa */
+    list-style-type: none;
+    background: #eaeaea;
+    height: 30px;
+}
+
+ul.menu_2 li {
+    /* float để đứng ngang hàng */
+    float: left;
+    margin-top: 6px;
+}
+
+ul.menu_2 li a {
+    padding: 5px 8px;
+    text-decoration: none;
+    color: black;
+}
+ul.menu_2 li a:hover {
+    color: #0a4ede;
+    text-decoration: underline;
+}
+
+ul.menu_2 li a.active {
+    font-weight: bold;
+}
+
+ul.menu_2 li a.spe {
+    background-color: #4eef7c;
+    color: white;
+    font-weight: bold;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 10px;
+}

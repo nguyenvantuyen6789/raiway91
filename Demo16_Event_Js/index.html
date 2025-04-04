@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Học Event Js</h4>
+
+    <!-- onclick: ấn chuột 1 lần -->
+    <button onclick="registerAccount()" type="button">Đăng ký 1</button>
+
+    <!-- ondblclick: Double Click: ấn chuột 2 lần -->
+    <br>
+    <button ondblclick="registerAccount2()" type="button">Đăng ký 2</button>
+
+    <h2 onclick="registerAccount()">Tài khoản Fb</h2>
+
+    <section ondblclick="registerAccount2()">Tài khoản Youtube</section>
+
+    <p onmouseover="diChuotQuaNhanVat()">Nhân vật siêu nhân</p>
+    <script>
+        // tạo hàm
+        function registerAccount() {
+            alert("Đăng ký tài khoản thành công");
+        }
+        function registerAccount2() {
+            alert("Đăng ký tài khoản 2");
+        }
+
+        function diChuotQuaNhanVat() {
+            alert("Bạn vừa di chuột qua tôi");
+        }
+    </script>
+</body>
+</html>

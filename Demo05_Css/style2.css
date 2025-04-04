@@ -1,0 +1,14 @@
+div {
+    background-color: blue;
+    margin: 40px;
+}
+
+section {
+    background-color: green;
+    margin: 70px;
+}
+
+span {
+    background-color: yellow;
+    margin-right: 15px;
+}

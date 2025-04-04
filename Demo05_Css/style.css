@@ -1,0 +1,30 @@
+div {
+    color: red;
+    background-color: yellow;
+    width: 300px;
+    height: 200px;
+    /* viền: độ rộng, loại viền, màu viền */
+    /* độ rộng: 10px */
+    /* loại viền: solid - nét liền, dotted - dấu chấm, dashed - nét đứt */
+    /*              double(nét đôi) */
+    border: 10px solid blue;
+
+    /* c2 */
+    /*border-width: 20px;*/
+    /*border-style: dashed;*/
+    /*border-color: red;*/
+}
+
+h2 {
+    background-color: pink;
+    border: 6px solid #0f1195;
+    /* c1 */
+    /*padding-top: 20px;*/
+    /*padding-right: 40px;*/
+    /*padding-bottom: 30px;*/
+    /*padding-left: 50px;*/
+    /* c2: 4 giá trị (trên phải dưới trái) */
+    /*padding: 20px 40px 30px 50px; */
+    /* đặc biệt: 1 giá trị duy nhất */
+    padding: 60px;
+}

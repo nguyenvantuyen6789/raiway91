@@ -1,0 +1,16 @@
+div {
+    background-color: yellow;
+    padding: 13px;
+    margin-bottom: 40px;
+}
+
+span {
+    background-color: aquamarine;
+    padding: 36px 51px 12px 90px;
+}
+
+section {
+    background-color: blueviolet;
+    margin-top: 20px;
+    padding: 52px;
+}

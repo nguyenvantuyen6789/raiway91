@@ -1,0 +1,53 @@
+.header {
+    background-color: aqua;
+    text-align: center;
+    /* c1: height */
+    /* c2: padding */
+    /*height: 100px;*/
+    padding: 30px;
+    font-size: 20px;
+}
+
+/*sv thực hành tạo menu với màu hồng: 5p*/
+.menu {
+    background-color: hotpink;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.content_left {
+    background-color: green;
+    width: 200px;
+    float: left;
+    height: 200px;
+    padding: 25px;
+    margin-right: 4px;
+}
+
+.main_content {
+    background-color: #3b85f3;
+    width: 800px;
+    float: left;
+    height: 200px;
+    padding: 25px;
+    margin-right: 4px;
+}
+
+.content_right {
+    background-color: #f3a33b;
+    width: 200px;
+    float: left;
+    height: 200px;
+    padding: 25px;
+}
+
+.cl {
+    clear: both;
+}
+
+.footer {
+    background-color: antiquewhite;
+    padding: 15px;
+    margin-top: 30px;
+}

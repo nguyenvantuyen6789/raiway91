@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- dùng js -->
+    <!-- c1: viết cặp thẻ script -->
+    <!-- c2: tạo file js, rồi tích hợp vào -->
+<!--    <script src="Data.js"></script>-->
+</head>
+<body>
+    <h4>Học DOM</h4>
+
+    <p id="fe_basic">Module học FE basic</p>
+    <script>
+        // lấy dom, thay css (style.attribute = value)
+        // document.getElementById("fe_basic").style.color = "red";
+        // document.getElementById("fe_basic").style.backgroundColor = "yellow";
+        // document.getElementById("fe_basic").style.fontWeight = "bold";
+        // document.getElementById("fe_basic").style.fontStyle = "italic";
+        // document.getElementById("fe_basic").style.textDecoration = "underline";
+        // document.getElementById("fe_basic").style.fontSize = "30px";
+        // document.getElementById("fe_basic").style.border = "2px dotted blue";
+    </script>
+
+    <div id="learn_js">
+        Học Js, có nhiều nội dung hay
+    </div>
+    <script>
+        // lấy html
+        // let result1 = document.getElementById("learn_js").innerHTML;
+        // console.log("Nội dung html: " + result1);
+
+        document.getElementById("learn_js").innerHTML = "Hay nhưng mà khó";
+    </script>
+</body>
+</html>

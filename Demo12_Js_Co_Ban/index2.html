@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h4>Chữa bài js</h4>
+    <script>
+        let num1 = 15;
+        let num2 = 26;
+        let total = num1 + num2;
+        // c1
+        console.log("Total: " + total);
+        // c2
+        console.log(`Total 2: ${total}`);
+
+        // const: hằng số
+        const num3 = 15;
+        console.log("Num3: " + num3);
+
+        // chia lấy dư: %
+        let result1 = 100 % 3;
+        console.log(`Result1: ${result1}`);
+        let result2 = 20 % 30;
+        console.log(`Result2: ${result2}`);
+
+        let a = 10;
+        // tăng lên 1 giá trị
+        a++;
+        a++;
+        console.log(`Kết quả a: ${a}`);
+
+        let b = 100;
+        // giảm đi 1 giá trị
+        b--;
+        console.log(`Kết quả b: ${b}`);
+        b--;
+        console.log(`Kết quả b: ${b}`);
+
+        let c = 21;
+        // tăng lên 1 giá trị
+        ++c;
+        console.log(`Kết quả c: ${c}`);
+
+        let d = 12;
+        let result4 = ++d + 3;
+        console.log(`Result4: ${result4}`);
+
+        let e = 4;
+        let result5 = e++ + e++ + e++;
+        result5 = result5 + e;
+        console.log(`Result5: ${result5}`);
+
+        for (let i = 0; i < 10; i++) {
+            console.log("Value i: " + i);
+        }
+        // thực hành
+        // tính tổng từ 1 đến 50
+        let total2 = 0;
+        for (let i = 0; i < 51; i++) {
+            total2 = total2 + i;
+        }
+
+        console.log("Tổng từ 1 - 50: " + total2);
+    </script>
+</body>
+</html>
