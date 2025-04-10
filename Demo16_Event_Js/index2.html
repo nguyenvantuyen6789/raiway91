@@ -5,6 +5,61 @@
     <title>Title</title>
 </head>
 <body>
+<!--    <h4>Học Event Js</h4>-->
+
+<!--    Full Name:-->
+<!--    <input id="fullName" type="text" onfocus="checkData()" onkeyup="printFullName()">-->
+
+<!--    <script>-->
+<!--        function checkData() {-->
+<!--            console.log("Chạy hàm focus");-->
+<!--        }-->
+
+<!--        // mỗi lần nhập 1 chữ sẽ in lại full name-->
+<!--        function printFullName() {-->
+<!--            let fullName = document.getElementById("fullName").value;-->
+<!--            console.log("Full name: " + fullName);-->
+<!--        }-->
+<!--    </script>-->
+
+
+    <h4>Học Event Js</h4>
+
+    <!-- onkeypress: chạy khi ấn nút xuống, chưa ghi nhận phím được điền -->
+    <!-- onkeyup: chạy khi nút lên trên, đã ghi nhận phím được điền -->
+    full name:
+    <input id="fullName" type="text" onfocus="checkData()" onkeypress="printFullName()">
+
+    <script>
+        function checkData() {
+            console.log("chạy hàm focus")
+        }
+
+        function printFullName() {
+            let fullName= document.getElementById("fullName").value;
+            console.log("Full Name: "+ fullName);
+        }
+
+    </script>
+
+
+    <!-- onchange: khi giá trị thay đổi -->
+    <br>
+    Country:
+    <select onchange="showCountry()" name="" id="country">
+        <option value="vn">Việt Nam</option>
+        <option value="us">Mỹ</option>
+        <option value="au">Úc</option>
+    </select>
+    <script>
+        function showCountry() {
+            let country = document.getElementById("country");
+            let value = country.options[country.selectedIndex].text;
+
+            alert("Quốc gia đã được thay đổi: " + value);
+        }
+    </script>
+
 
 </body>
 </html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- tích hợp jquery -->
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <h4>Jquery Selector</h4>
+
+    <section id="giaoDien">Làm hiệu ứng giao diện</section>
+    <div id="fe">Học FE cơ bản</div>
+
+    <button type="button" id="btnThucHien">Thực hiện</button>
+    <br>
+    <button type="button" id="btnThucHien2">Thực hiện2</button>
+    <script>
+        $(function () {
+            $("#btnThucHien").click(function () {
+                // lấy chữ: text()
+                // let result1 = $("#giaoDien").text();
+                // console.log(`Result1: ${result1}`);
+
+                // set text: text()
+                // $("#giaoDien").text("Hiệu ứng nâng cao");
+
+                $("#giaoDien").css("color", "green");
+                $("#giaoDien").css("font-weight", "bold");
+            });
+
+            $("#btnThucHien2").click(function () {
+                $("#fe").css("font-style", "italic");
+                $("#fe").css("text-decoration", "underline");
+            });
+        });
+    </script>
+
+    <p class="content">Nội dung 1</p>
+    <br>
+    <br>
+    <p>Nội dung 2</p>
+    <p class="content">Nội dung 3</p>
+
+    <button type="button" id="btnThucHien3">Thực hiện 3</button>
+    <br>
+    <button type="button" id="btnThucHien4">Thực hiện 4</button>
+    <script>
+        $(function () {
+            $("#btnThucHien3").click(function () {
+                $(".content").css("color", "red");
+                $(".content").css("text-decoration", "underline");
+            })
+            $("#btnThucHien4").click(function () {
+                // *: tất cả các thẻ, cả thẻ body
+                $("*").css("background-color", "yellow");
+            })
+        })
+    </script>
+
+    <div>
+        <p>Thẻ 5</p>
+        Thẻ 4
+    </div>
+
+    <p>Thẻ 6</p>
+
+    <button type="button" id="btnThucHien7">Thực hiện 7</button>
+    <script>
+        $(function () {
+            $("#btnThucHien7").click(function () {
+                // thẻ p 5 ảnh hưởng
+                // thẻ p 6 k ảnh hưởng
+                $("div + p").css("color", "blue");
+            })
+        })
+    </script>
+
+    <div>
+        Thẻ 7
+        <section>
+            <p>Thẻ 8</p>
+        </section>
+    </div>
+    <p>Thẻ 9</p>
+
+    <button type="button" id="btnThucHien8">Thực hiện 8</button>
+    <script>
+        $(function () {
+            $("#btnThucHien8").click(function () {
+                // thẻ p 8, bên trong div chịu ảnh hưởng
+                // thẻ p 9 k ảnh hưởng
+                $("div > p").css("font-weight", "bold");
+            })
+        })
+    </script>
+</body>
+</html>

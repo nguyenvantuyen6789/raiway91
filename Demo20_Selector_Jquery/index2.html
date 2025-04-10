@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- tích hợp jquery -->
+    <script src="jquery.min.js"></script>
+
+</head>
+<body>
+    <h4>Chữa BT</h4>
+    <p id="doan1">Đoạn văn cũ</p>
+    <button type="button" id="btnThucHien1">Thực hiện 1</button>
+    <script>
+        $(function () {
+            $("#btnThucHien1").click(function () {
+                $("#doan1").text("Đoạn văn mới");
+            })
+        })
+    </script>
+
+    <p>Đoạn văn 1</p>
+    <p class="highlight">Đoạn văn 2</p>
+    <p class="highlight">Đoạn văn 3</p>
+    <p>Đoạn văn 4</p>
+    <button type="button" id="btnThucHien2">Thực hiện 2</button>
+    <script>
+        $(function () {
+            $("#btnThucHien2").click(function () {
+                $(".highlight").css("background-color", "yellow");
+            })
+        })
+    </script>
+</body>
+</html>

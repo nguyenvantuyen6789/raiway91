@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- tích hợp jquery -->
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <h4>Jquery Effect</h4>
+
+    <div>Học code cần cố gắng, mới xin được việc lương cao</div>
+    <p>Thị trường nhiều công ty yêu cầu 3+ năm kn</p>
+    <p>1 số ít công ty yc 1, 2 năm kn</p>
+
+    <button type="button" id="btnAn">Ẩn</button>
+    <br>
+    <button type="button" id="btnShow">Hiện</button>
+    <script>
+        $(function () {
+            // hàm hide: ẩn, show: hiện
+            $("#btnAn").click(function () {
+                // ẩn thẻ div + từ từ (mặc định khoảng 1s)
+                // set time: fadeOut(4000)
+                $("div").fadeOut(4000);
+            });
+            $("#btnShow").click(function () {
+                // hiện thẻ div + từ từ (mặc định khoảng 1s)
+                // set time: fadeIn(3000)
+                $("div").fadeIn(3000);
+            });
+        })
+    </script>
+</body>
+</html>

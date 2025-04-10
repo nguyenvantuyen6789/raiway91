@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- tích hợp jquery -->
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <h4>Animate</h4>
+
+    <!-- thuộc tính position: absolute, giúp thẻ sang trái -->
+    <!-- phải, trên dưới với box chứa nó -->
+    <div class="cha">
+        <div class="box">
+            a
+        </div>
+    </div>
+    <style>
+        .cha {
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+            position: relative;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+        }
+    </style>
+</body>
+</html>

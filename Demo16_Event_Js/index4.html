@@ -1,0 +1,37 @@
+;<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h4 title="abc">Set Thuộc Tính</h4>
+
+    <p title="Thời tiết đẹp" id="thoiTiet">Cuối tuần nắng ấm hơn</p>
+
+    <button type="button" onclick="change()">Thay đổi</button>
+
+    <script>
+        function change() {
+            // set attribute: key, value
+            document.getElementById("thoiTiet").setAttribute("title", "Nắng ấm xa dần");
+        }
+    </script>
+
+    <br>
+    <input class="db mb" type="text" id="phone" placeholder="Nhập số điện thoại">
+    <button type="button" onclick="change2()">Thay đổi 2</button>
+    <script>
+        function change2() {
+            // set attribute: key, value
+            document.getElementById("phone").setAttribute("placeholder", "SĐT có 10 số");
+            document.getElementById("phone").setAttribute("class", "data");
+            document.getElementById("phone").setAttribute("type", "password");
+            document.getElementById("phone").setAttribute("maxlength", 7);
+        }
+    </script>
+</body>
+</html>

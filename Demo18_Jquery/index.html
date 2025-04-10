@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 2 cách khai báo -->
+    <!-- c1: Link CDN(Content Delivery Network) -->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>-->
+
+    <!-- c2: Dùng file trực tiếp jquery.min.js -->
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <h4>Học Jquery</h4>
+
+    <!-- selector: Bộ chọn: Tên thẻ -->
+    <p>Đầu tuần mới, sức sống mới</p>
+    <div>Ngôn ngữ: Html, Css, Jquery</div>
+    <p>Đầu tuần mới, sức sống mới 2</p>
+
+    <script>
+        // c1: $(function
+        // c2: $(document
+        // $(function () {
+        //     // dùng val() lấy giá trị
+        //     let name = $("#name").val();
+        //     console.log(name);
+        // })
+
+        $(document).ready(function () {
+            // dùng val() lấy giá trị
+            // let name = $("#name").val();
+            // console.log(name);
+
+        //    $(“p”): Tên thẻ
+            $("p").css("color", "red");
+        })
+    </script>
+    <input type="text" id="name" value="Nguyễn Ngọc">
+
+    <p>Nội dung</p>
+
+
+</body>
+</html>
