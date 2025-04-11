@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <h4>BTVN</h4>
+    <p id="demo">Đây là đoạn văn bản</p>
+
+    <button id="hideBtn">Ẩn</button>
+
+    <br>
+    <button id="showBtn">Hiện</button>
+    <script>
+        // bài 1: ấn nút ẩn hiện để ẩn, hiện đoạn p
+        $("#hideBtn").click(function () {
+            $("#demo").hide(3000);
+        })
+        $("#showBtn").click(function () {
+            $("#demo").show(3000);
+        })
+    </script>
+</body>
+</html>

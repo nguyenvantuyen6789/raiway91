@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <h4>BTVN5</h4>
+
+    <style>
+        .box {
+            width: 250px;
+            height: 200px;
+            background-color: blue;
+            position: absolute;
+        }
+    </style>
+    <div class="box">
+
+    </div>
+    <button id="btnThucThien1" style="margin-top: 250px;">Thực Hiện 1</button>
+    <br>
+    <button id="btnThucThien2">Thực Hiện 2</button>
+
+    <script>
+        $("#btnThucThien1").click(function () {
+            $(".box").animate({top: "150px", left: "150px"});
+        })
+        $("#btnThucThien2").click(function () {
+            $(".box").animate({left: "350px"});
+            $(".box").animate({top: "400px"});
+        })
+    </script>
+</body>
+</html>

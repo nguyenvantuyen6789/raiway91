@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <h4>BTVN2</h4>
+    <p id="demo" style="display: none;">đoạn văn bài 2</p>
+
+    <button id="btnThucThien">Ẩn/Hiện</button>
+    <br>
+    <button id="btnThucThien2">Ẩn/Hiện 2</button>
+
+    <script>
+        // bài 2: ấn nút ẩn hiện xen kẽ
+        let i = 0;
+        $("#btnThucThien").click(function () {
+            i++;
+            if (i % 2 === 1) {
+                $("#demo").hide();
+            } else {
+                $("#demo").show();
+            }
+        })
+        $("#btnThucThien2").click(function () {
+            $("#demo").toggle();
+        })
+    </script>
+</body>
+</html>
