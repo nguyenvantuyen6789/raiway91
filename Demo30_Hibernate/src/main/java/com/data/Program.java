@@ -45,6 +45,8 @@ public class Program {
 
                 String fullName = a.getFullName();
                 System.out.println(fullName);
+                int ageNumber = a.getAgeNumber();
+                System.out.println(ageNumber);
             });
         } catch (Exception ex) {
             System.out.println(ex.getMessage());

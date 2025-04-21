@@ -14,9 +14,52 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(nullable = false)
     private String fullName;
 
     private String address;
+
+    // java có kiểu số: => sql
+    // int      => int
+    // bigint, smallint, short: columnDefinition = "dữ liệu"
+    @Column(name = "age_number", columnDefinition = "bigint")
+    private int ageNumber;
+
+    @Column(columnDefinition = "smallint")
+    private int money;
+
+    // unique = true: Dữ liệu phải duy nhất
+    @Column(unique = true)
+    private String email;
+
+    // String: mặc định sang sql là varchar(255)
+    // text: custom sang kiểu text
+    @Column(columnDefinition = "text")
+    private String content;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    public int getAgeNumber() {
+        return ageNumber;
+    }
+
+    public void setAgeNumber(int ageNumber) {
+        this.ageNumber = ageNumber;
+    }
 
     public int getId() {
         return id;
