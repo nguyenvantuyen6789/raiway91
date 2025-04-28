@@ -37,7 +37,6 @@ public class Program2_Create {
             // code, lay address by id = 6
             // code, lay person by id = 8
 
-
             // khi set đối tượng(có chứa id=6), sau đó save thì id của
             // đối tượng sẽ được lưu vào khoá ngoại
             address.setPerson(person);

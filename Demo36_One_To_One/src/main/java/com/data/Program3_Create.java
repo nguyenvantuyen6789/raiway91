@@ -24,8 +24,8 @@ public class Program3_Create {
             Query<Address> query = session.createQuery("FROM Address WHERE id = 6");
             Address address = query.getSingleResultOrNull();
 
-            Query<Person> query2 = session.createQuery("FROM Person WHERE id = 8");
-            Person person = query2.getSingleResultOrNull();
+            Person person = new Person();
+            person.setId(8);
             // address set cả đối tượng person(id=8) để lấy giá trị
             // id = 8 làm khoá ngoại
             address.setPerson(person);

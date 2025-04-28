@@ -7,9 +7,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 import org.hibernate.service.ServiceRegistry;
 
-import java.util.List;
-
-public class Program2_Create {
+public class Program4_Demo {
     public static void main(String[] args) {
         // session: tạo phiên làm việc với hibernate
         Session session = null;
@@ -18,27 +16,14 @@ public class Program2_Create {
             session = buildSessionFactory().openSession();
 
             session.beginTransaction();
-            // tạo address mới,có person mới
-            // b1: tạo person và lưu person
-            // b2: tạo address, set các thuộc tính cho address
-            // cần address.setPerson(person ở bước 1
-            // b3: save
+
+            Query<Address> query = session.createQuery("from Address where id = 8");
+            Address address = query.getSingleResultOrNull();
 
             Person person = new Person();
-            person.setFullName("Nguyen Van");
-            person.setPhone("789");
+            person.setId(9);
 
-            session.save(person);
-
-            Address address = new Address();
-            address.setStreet("Ho Tung Mau");
-            address.setCity("HN");
-
-            // code, lay address by id = 6
-            // code, lay person by id = 8
-
-            // khi set đối tượng(có chứa id=6), sau đó save thì id của
-            // đối tượng sẽ được lưu vào khoá ngoại
+            // address set person(Person id = 9) để lưu khoá ngoại
             address.setPerson(person);
 
             session.save(address);

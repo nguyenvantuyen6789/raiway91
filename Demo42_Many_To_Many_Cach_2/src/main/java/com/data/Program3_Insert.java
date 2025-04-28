@@ -7,9 +7,10 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 import org.hibernate.service.ServiceRegistry;
 
+import java.util.ArrayList;
 import java.util.List;
-
-public class Program2_Show {
+// thực thể môn học sinh viên: int diem, String danhGia
+public class Program3_Insert {
     public static void main(String[] args) {
         // session: tạo phiên làm việc với hibernate
         Session session = null;
@@ -17,24 +18,35 @@ public class Program2_Show {
             // tạo session
             session = buildSessionFactory().openSession();
 
-            Query<MonHoc> query = session.createQuery("FROM MonHoc");
-            List<MonHoc> list = query.list();
-            list.forEach(monHoc -> {
-                System.out.println("====");
-                System.out.println("Mã môn học: " + monHoc.getId());
-                System.out.println("Tên môn học: " + monHoc.getTenMon());
-                System.out.println("Số giờ: " + monHoc.getSoGio());
+            Query<MonHoc> query = session.createQuery("FROM MonHoc WHERE id = 3", MonHoc.class);
+            MonHoc monHoc = query.getSingleResultOrNull();
+            if (monHoc != null) {
+                // tạo ra 3 đối tượng sinh viên có id 1,2,3
+                SinhVien sinhVien1 = new SinhVien();
+                sinhVien1.setId(1);
+                SinhVien sinhVien2 = new SinhVien();
+                sinhVien2.setId(2);
+                SinhVien sinhVien3 = new SinhVien();
+                sinhVien3.setId(3);
 
-                List<SinhVien> sinhViens = monHoc.getSinhViens();
-                if (sinhViens.isEmpty()) {
-                    System.out.println("Không có sinh viên nào học môn này");
-                } else {
-                    sinhViens.forEach(sinhVien -> {
-                        System.out.println("Mã sinh viên: " + sinhVien.getId());
-                        System.out.println("Tên sinh viên: " + sinhVien.getFullName());
-                    });
-                }
-            });
+                // tạo list rồi add 3 sv
+                List<SinhVien> sinhViens = new ArrayList<>();
+                sinhViens.add(sinhVien1);
+                sinhViens.add(sinhVien2);
+                sinhViens.add(sinhVien3);
+
+                // set list sinh viên cho môn học
+                monHoc.setSinhViens(sinhViens);
+
+                // bắt đầu transaction
+                session.beginTransaction();
+                // lưu môn học
+                session.save(monHoc);
+                // commit transaction
+                session.getTransaction().commit();
+            } else {
+                System.out.println("MonHoc not found");
+            }
 
 
         } catch (Exception ex) {

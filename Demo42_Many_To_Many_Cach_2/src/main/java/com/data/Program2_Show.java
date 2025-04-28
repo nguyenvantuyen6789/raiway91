@@ -4,9 +4,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 import org.hibernate.service.ServiceRegistry;
 
-public class Program {
+import java.util.List;
+
+public class Program2_Show {
     public static void main(String[] args) {
         // session: tạo phiên làm việc với hibernate
         Session session = null;
@@ -14,40 +17,24 @@ public class Program {
             // tạo session
             session = buildSessionFactory().openSession();
 
-            // tạo môn học
-            MonHoc monHoc1 = new MonHoc();
-            monHoc1.setTenMon("Lập trình Java");
-            monHoc1.setSoGio(30);
-            monHoc1.setSoBuoi(15);
+            Query<MonHoc> query = session.createQuery("FROM MonHoc");
+            List<MonHoc> list = query.list();
+            list.forEach(monHoc -> {
+                System.out.println("====");
+                System.out.println("Mã môn học: " + monHoc.getId());
+                System.out.println("Tên môn học: " + monHoc.getTenMon());
+                System.out.println("Số giờ: " + monHoc.getSoGio());
 
-            // tạo moonn học
-            MonHoc monHoc2 = new MonHoc();
-            monHoc2.setTenMon("Lập trình C#");
-            monHoc2.setSoGio(30);
-            monHoc2.setSoBuoi(15);
-
-            // tạo sinh viên
-            SinhVien sinhVien1 = new SinhVien();
-            sinhVien1.setMaSinhVien("SV001");
-            sinhVien1.setFullName("Nguyễn Văn A");
-            sinhVien1.setGioiTinh("Nam");
-            
-            // tạo sinh viên
-            SinhVien sinhVien2 = new SinhVien();
-            sinhVien2.setMaSinhVien("SV002");
-            sinhVien2.setFullName("Nguyễn Văn B");
-            sinhVien2.setGioiTinh("Nam");
-
-            session.beginTransaction();
-
-            // session save sinh viên, môn học
-            session.save(sinhVien1);
-            session.save(sinhVien2);
-
-            session.save(monHoc1);
-            session.save(monHoc2);
-
-            session.getTransaction().commit();
+                List<SinhVien> sinhViens = monHoc.getSinhViens();
+                if (sinhViens.isEmpty()) {
+                    System.out.println("Không có sinh viên nào học môn này");
+                } else {
+                    sinhViens.forEach(sinhVien -> {
+                        System.out.println("Mã sinh viên: " + sinhVien.getId());
+                        System.out.println("Tên sinh viên: " + sinhVien.getFullName());
+                    });
+                }
+            });
 
 
         } catch (Exception ex) {
