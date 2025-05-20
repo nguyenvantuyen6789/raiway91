@@ -18,7 +18,7 @@ public class Department {
     // b1.
     // 1 department có nhiều employee: @OneToMany:
     // dùng List<Employee> hoặc Set<Employee> đều được
-    @OneToMany(mappedBy = "department")
+    @OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
     private List<Employee> employees;
 
     public List<Employee> getEmployees() {

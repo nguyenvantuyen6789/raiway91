@@ -14,7 +14,7 @@ public class Employee {
     private String phone;
 
     // Nhiều Employee thuộc 1 department: @ManyToOne
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     // tạo khoá ngoại department_id
     @JoinColumn(name = "department_id")
     private Department department;

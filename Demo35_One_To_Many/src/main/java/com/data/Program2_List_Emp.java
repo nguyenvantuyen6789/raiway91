@@ -17,19 +17,39 @@ public class Program2_List_Emp {
             // tạo session
             session = buildSessionFactory().openSession();
 
-            Query<Employee> query = session.createQuery("FROM Employee");
-            List<Employee> employees = query.list();
+            // get employee
+//            Query<Employee> query = session.createQuery("FROM Employee");
+//            List<Employee> employees = query.list();
+//
+//            employees.forEach(employee -> {
+//                System.out.println("Em Id: " + employee.getId());
+//                System.out.println("Em Name: " + employee.getEmployeeName());
+//                System.out.println("Em Phone: " + employee.getPhone());
+//
+//                Department department = employee.getDepartment();
+//                if (department != null) {
+//                    System.out.println("Department Name: " + department.getDepartmentName());
+//                } else {
+//                    System.out.println("Nhan vien nay k co phong ban");
+//                }
+//            });
 
-            employees.forEach(employee -> {
-                System.out.println("Em Id: " + employee.getId());
-                System.out.println("Em Name: " + employee.getEmployeeName());
-                System.out.println("Em Phone: " + employee.getPhone());
+            // get department
+            Query<Department> query = session.createQuery("FROM Department");
+            List<Department> departments = query.list();
 
-                Department department = employee.getDepartment();
-                if (department != null) {
-                    System.out.println("Department Name: " + department.getDepartmentName());
+            departments.forEach(department -> {
+                System.out.println("Department Id: " + department.getId());
+                System.out.println("Department Name: " + department.getDepartmentName());
+
+                List<Employee> employees = department.getEmployees();
+                if (employees != null) {
+                    employees.forEach(employee -> {
+                        System.out.println("Employee Id: " + employee.getId());
+                        System.out.println("Employee Name: " + employee.getEmployeeName());
+                    });
                 } else {
-                    System.out.println("Nhan vien nay k co phong ban");
+                    System.out.println("Phong ban nay khong co nhan vien");
                 }
             });
         } catch (Exception ex) {

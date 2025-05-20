@@ -5,48 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcfbdd21-1783-4869-92fa-ec88c7a5b66f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Demo36_One_To_One/src/main/java/com/data/Program4_Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo40_Git/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo40_Git/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo40_Git/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo40_Git/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo40_Git/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo40_Git/Demo40_Git.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo40_Git/src/com/data/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo42_Many_To_Many_Cach_2/Demo42_Many_To_Many_Cach_2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo42_Many_To_Many_Cach_2/src/main/java/com/data/MonHoc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo42_Many_To_Many_Cach_2/src/main/java/com/data/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo42_Many_To_Many_Cach_2/src/main/java/com/data/Program2_Show.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo42_Many_To_Many_Cach_2/src/main/java/com/data/Program3_Insert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo42_Many_To_Many_Cach_2/src/main/java/com/data/SinhVien.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo42_Many_To_Many_Cach_2/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo43/Demo43.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo43/src/main/java/com/data/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo43/src/main/java/com/data/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo43/src/main/java/com/data/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Demo43/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/data/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/data/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/data/Program.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Demo36_One_To_One/src/main/java/com/data/Program2_Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Demo36_One_To_One/src/main/java/com/data/Program2_Create.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Demo36_One_To_One/src/main/java/com/data/Program3_Create.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Demo36_One_To_One/src/main/java/com/data/Program3_Create.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Demo36_One_To_One/target/classes/com/data/Program2_Create.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Demo36_One_To_One/target/classes/com/data/Program2_Create.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Demo36_One_To_One/target/classes/com/data/Program3_Create.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Demo36_One_To_One/target/classes/com/data/Program3_Create.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +36,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -114,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745842916881</updated>
-      <workItem from="1745842918907" duration="603000" />
+      <workItem from="1745842918907" duration="2864000" />
     </task>
     <servers />
   </component>
