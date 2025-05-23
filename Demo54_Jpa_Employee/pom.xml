@@ -61,6 +61,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- cách 1: copy dependency thymeleaf vào -->
+        <!-- cách 2: Tạo project mới, rồi lấy dependency cho vào -->
+        <!-- hướng dẫn tạo project bằng web spring.io -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
