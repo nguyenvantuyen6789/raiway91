@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.2/css/bootstrap.min.css} "/>
+    <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/5.15.4/css/all.css} "/>
+    <script th:src="@{/webjars/jquery/3.6.3/jquery.min.js}"></script>
+
+</head>
+<body>
+    <h4>List Employee</h4>
+    <h4>Count: <span th:text="${employees.size()}"></span></h4>
+
+    <a href="employee-add" class="btn btn-primary btn-sm">Add Employee</a>
+
+    <!-- tạo bảng đẹp bằng bootstrap -->
+    <table class="table table-hover table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- dùng themeleaf: thêm "th" (trong bất kỷ thẻ html nào) -->
+            <!-- chạy vòng lặp: th:each -->
+            <!-- hiển thị dữ liệu: th:text -->
+            <!-- if: th:if -->
+            <tr th:each="obj, loop : ${employees}">
+                <td th:text="${loop.index + 1}"></td>
+                <td th:text="${obj.id}"></td>
+                <td th:text="${obj.fullName}"></td>
+                <td>
+                    <span th:text="${obj.email}" th:if="${obj.email != ''}"></span>
+                    <span th:text="${'Thiếu Email'}" th:unless="${obj.email != ''}"></span>
+                </td>
+                <td th:text="${obj.phone}"></td>
+                <td><a th:href="'employee-delete/' + ${obj.id}" class="btn btn-danger btn-sm">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.2/css/bootstrap.min.css} "/>
+    <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/5.15.4/css/all.css} "/>
+    <script th:src="@{/webjars/jquery/3.6.3/jquery.min.js}"></script>
+
+</head>
+<body>
+    <h4>Employee Add</h4>
+
+    <form action="employee-save" method="post">
+        <div>
+            <label for="">Full Name</label>
+            <input type="text" name="fullName" class="form-control form-control-sm">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="text" name="email" class="form-control form-control-sm">
+        </div>
+        <div>
+            <label for="">Phone</label>
+            <input type="text" name="phone" class="form-control form-control-sm">
+        </div>
+        <div>
+            <label for="">Status</label>
+            <select name="status" id="" class="form-control form-control-sm">
+                <option value="ACTIVE">Còn hoạt động</option>
+                <option value="INACTIVE">Ngừng hoạt động</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Submit" class="btn btn-primary btn-sm" />
+    </form>
+</body>
+</html>
