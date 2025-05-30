@@ -25,8 +25,8 @@ public class Department {
     // cả 2 bảng
     // dùng LAZY, nếu gọi đối tượng dưới thì mới truy vấn
     // cả 2 bảng
-    @OneToMany(mappedBy = "department", fetch = FetchType.LAZY)
-    private List<Employee> employees;
+//    @OneToMany(mappedBy = "department", fetch = FetchType.LAZY)
+//    private List<Employee> employees;
 
     @Override
     public String toString() {

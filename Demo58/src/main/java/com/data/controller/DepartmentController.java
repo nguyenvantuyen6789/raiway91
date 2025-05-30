@@ -41,14 +41,14 @@ public class DepartmentController {
             departmentDTO.setDepartmentName(department.getDepartmentName());
 
             List<EmployeeDTO> employeeDTOS = new ArrayList<>();
-            List<Employee> employees = department.getEmployees();
-            for (int i = 0; i < employees.size(); i++) {
-                EmployeeDTO employeeDTO = new EmployeeDTO();
-                employeeDTO.setId(employees.get(i).getId());
-                employeeDTO.setFullName(employees.get(i).getFullName());
-
-                employeeDTOS.add(employeeDTO);
-            }
+//            List<Employee> employees = department.getEmployees();
+//            for (int i = 0; i < employees.size(); i++) {
+//                EmployeeDTO employeeDTO = new EmployeeDTO();
+//                employeeDTO.setId(employees.get(i).getId());
+//                employeeDTO.setFullName(employees.get(i).getFullName());
+//
+//                employeeDTOS.add(employeeDTO);
+//            }
 
             departmentDTO.setEmployeeDTOS(employeeDTOS);
 
@@ -86,5 +86,12 @@ public class DepartmentController {
                 .findByDepartmentNameAndAddress(departmentName, address);
 
         return ResponseEntity.ok(departments.size());
+    }
+
+    @GetMapping("departments/{id}")
+    public ResponseEntity<?> getById(@PathVariable Integer id) {
+        Department department = departmentRepo.findById(id).get();
+
+        return ResponseEntity.ok(department);
     }
 }

@@ -32,9 +32,9 @@ public class Employee {
 
     // dùng EAGER, dù có lấy đối tượng dưới hay k cũng truy vấn
     // cả 2 bảng
-    @ManyToOne
-    @JoinColumn(name = "department_id")
-    private Department department;
+//    @ManyToOne
+//    @JoinColumn(name = "department_id")
+//    private Department department;
 
     @Override
     public String toString() {
